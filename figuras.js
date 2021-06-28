@@ -1,0 +1,1 @@
+console.log("Hola Kaito Kun, te amo hijo mio!");
