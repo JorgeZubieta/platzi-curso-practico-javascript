@@ -30,27 +30,31 @@ console.group("Formulas - Triangulos");
     console.log("Perimetro del triangulo es: " + perimetroTriangulo + "cm");
 
     const areaTriangulo = (baseTriangulo * alturaTraingulo) /2;
-    console.log("Area cuadrado: " + areaTriangulo + "cm^2");
+    console.log("Area triangulo: " + areaTriangulo + "cm^2");
 console.groupEnd();
 
 // Formulas del Circulo
 console.group("Formulas - Circulo"); 
+    // RADIO
     const radioCirculo =4;
+    console.log( "El Radio del Circclo mide: " + radioCirculo + "cm");   
+    
+    // DIAMETRO
     const diametroCirculo = radioCirculo*2;
+    console.log( "El Diametro del Ciruclo mide: " + diametroCirculo+ "cm");    
+    
     // PI
     // 2 formas de definir el valor PI
     // 1 - manualmente    let PI = 3.1415;
     // 2 - utilizando una herramienta de js la cual tiene varias herramientas como asi el valor PI!
     let PI = Math.PI;
-
-    console.log( "El Radio del Circclo mide: " + radioCirculo + "cm");   
-    console.log( "El Diametro del Ciruclo mide: " + diametroCirculo+ "cm");    
     console.log( "El valor pi es de: " + PI);
 
-    // Circulo
+    // CIRCUNFERENCIA / PERIMETRO
     const perimetroCiruclo = diametroCirculo*PI;
     console.log("Perimetro del Circulo es: " + perimetroCiruclo + "cm");
 
+    // AREA
     const areaCirculo = (radioCirculo * radioCirculo) * PI;
     console.log("El area de Circulo es: " + areaCirculo + "cm^2");
 console.groupEnd();
