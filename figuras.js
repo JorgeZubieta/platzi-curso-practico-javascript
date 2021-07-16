@@ -80,11 +80,14 @@ function calcularAlturaTrianguloIsosceles(){
     const input3 = document.getElementById("InputTrianguloBase");
     const base = Number(input3.value);
     
-    if (lado1 === lado2) {
+    if (lado1 === lado2 && lado1 != base) {
         // llamamos a la funcion  perimetroCuadrado la cual va arealizar el calculo
         const altura = alturaTrianguloIsosceles(lado1, lado2, base);
         alert('La altura del Tráingulo Isósceles es de: ' + altura + 'cm');
     }else{
+        if (base === lado1){
+            alert('Cuidado es un triangulo Equilatero!');            
+        }else
         alert('El Lado 1 y Lado 2 deben ser iguales!');
     }
 
