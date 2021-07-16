@@ -55,7 +55,7 @@ function calcularPerimetroTriangulo() {
     
     // llamamos a la funcion  perimetroCuadrado la cual va arealizar el calculo!
     const perimetro = perimetroTriangulo(lado1, lado2, base);
-    alert('El perimetro Total es de: ' + perimetro + 'cm');
+    alert('El Perímetro Total es de: ' + perimetro + 'cm');
 }
 
 function calcularAreaTriangulo() {
@@ -67,7 +67,7 @@ function calcularAreaTriangulo() {
     
     // llamamos a la funcion  perimetroCuadrado la cual va arealizar el calculo!
     const area = areaTriangulo(altura, base);
-    alert('El Arear Total es de: ' + area + 'cm^2 (centimetros cuadrados)');
+    alert('El Área Total es de: ' + area + 'cm^2 (centimetros cuadrados)');
 }
 
 function calcularAlturaTrianguloIsosceles(){
@@ -83,9 +83,9 @@ function calcularAlturaTrianguloIsosceles(){
     if (lado1 === lado2) {
         // llamamos a la funcion  perimetroCuadrado la cual va arealizar el calculo
         const altura = alturaTrianguloIsosceles(lado1, lado2, base);
-        alert('La altura del Traingulo Isosceles es de: ' + altura + 'cm');
+        alert('La altura del Tráingulo Isósceles es de: ' + altura + 'cm');
     }else{
-        alert('Lad1 1 y Lado 2 deben ser iguales!');
+        alert('El Lado 1 y Lado 2 deben ser iguales!');
     }
 
 }
