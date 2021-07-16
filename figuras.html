@@ -13,11 +13,11 @@
         </h1>
         <p>Este es el primer taller del curso práctico de JavaScript</p>
     </header>
-<!-- Formulario -->
+<!-- Formulario Cuadrado-->
     <section>
         <h2>Calcula el area y perimetro de un cuadrado</h2>
         <form>
-            <label for="inputCuadrado">
+            <label for="InputCuadrado">
                 Ingresa la medida de cada lado de tu cuadrado
             </label>
             
@@ -34,7 +34,72 @@
 
         </form>
     </section>
-<!-- Formulario -->
+<!-- Fin Formulario Cuadrado-->
+
+
+<!-- Formulario Triangulo-->
+<section>
+    <h2>Calcula el area y perimetro de un Triangulo</h2>
+    <form>
+        <label for="InputTrianguloLado1">
+            Lado 1
+        </label>
+        <input type="number" id="InputTrianguloLado1"/>
+        
+
+        <label for="InputTrianguloLado2">
+            Lado 2
+        </label>
+        <input type="number" id="InputTrianguloLado2"/>
+        
+
+        <label for="InputTrianguloBase">
+            Base 
+        </label>
+        <input type="number" id="InputTrianguloBase"/>
+
+        <label for="InputTrianguloAltura">
+            Altura
+        </label>
+        <input type="number" id="InputTrianguloAltura"/>
+
+        <!-- Creamos las funciones que seran llamadas desde el JS! -->
+        <button type="button" onclick="calcularPerimetroTriangulo()">
+            Calcular el perimetro
+        </button>
+        <button type="button" onclick="calcularAreaTriangulo()">
+            Calcular el area
+        </button>
+        <button type="button" onclick="calcularAlturaTrianguloIsosceles()">
+            Calcular la Altura de un Traingulo Isosceles
+        </button>
+        <!-- Creamos las funciones que seran llamadas desde el JS! -->
+    </form>
+</section>
+<!-- Fin Formulario Traingulo-->
+
+
+<!-- Formulario Circulo-->
+<section>
+    <h2>Calcula el diametro y el area de un Circulo</h2>
+    <form>
+        <label for="InputCirculo">
+            Radio
+        </label>
+        <input type="number" id="InputCirculo"/>
+
+        <!-- Creamos las funciones que seran llamadas desde el JS! -->
+        <button type="button" onclick="calcularPerimetroCirculo()">
+            Calcular el perimetro
+        </button>
+        <button type="button" onclick="calcularAreaCirculo()">
+            Calcular el area
+        </button>
+        <!-- Creamos las funciones que seran llamadas desde el JS! -->
+
+    </form>
+</section>
+<!-- Fin Formulario Circulo-->
 
     <script src="./figuras.js"> </script>
 </body>
