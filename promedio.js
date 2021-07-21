@@ -7,7 +7,7 @@ function calcularMediaAritmetica (lista){
         function (valorAcumulado = 0, valorArray) {
             return valorAcumulado = valorAcumulado + valorArray;
         }
-    );    
-    const promediolista = sumaLista / lista.length;
-    return promediolista;
+);    
+const promediolista = sumaLista / lista.length;
+return promediolista;
 }
