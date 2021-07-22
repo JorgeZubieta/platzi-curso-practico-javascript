@@ -6,9 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediana</title>
 </head>
-<body>
-    <h1>Mediana</h1>
 
-    <script src = "./mediana.js"></script>
-</body>
+<body>
+    <header>
+        <h1>
+            "Calulo de la Mediana de un Array"
+        </h1>
+        <p>Reto de la Mediana del Curso Práctico de JavaScript.</p>
+    </header>
+    
+    <section>
+        <h2>Ingresa el sueldo de los empleados</h2>
+    
+    <form>
+        <label for="InputSueldo">Total $:</label>
+        <input id="InputSueldo" type="number" />
+    
+        <!-- llamada a la accion call to action! -->
+        <!-- cambie el type de button a reset para que se resete la pmatalla al ingresar u numero-->
+        <button type="reset" onclick="clickGuardar()">
+            Guardar
+        </button>
+        
+        
+        <button type="button" onclick="clickMediana()">
+            Calcular la mediana
+        </button>
+
+        <p id="resultMediana"></p>
+
+        </form>
+    </section>
+
+    <script src="./mediana.js"></script>
+
 </html>
