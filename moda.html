@@ -7,8 +7,37 @@
     <title>Moda</title>
 </head>
 <body>
-    <h1>Moda</h1>
+    <header>
+        <h1>
+            "Calulo de la Moda de un Array"
+        </h1>
+        <p>Reto de la Moda -  Curso Práctico de JavaScript.</p>
+    </header>
+    
+    <section>
+        <h2>Ingresa un numero</h2>
+    
+    <form>
+        <label for="InputNumero"></label>
+        <input id="InputNumero" type="number" />
+    
+        <!-- llamada a la accion call to action! -->
+        <!-- cambie el type de button a reset para que se resete la pmatalla al ingresar u numero-->
+        <button type="reset" onclick="clickGuardar()">
+            Guardar
+        </button>
+        
+        <button type="button" onclick="clickModa()">
+            Calcular Moda
+        </button>
+    
+        <p id="resultModa"></p>
+    
+        </form>
+    </section>
 
     <script src = "./moda.js"></script>
 </body>
 </html>
+
+
