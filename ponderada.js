@@ -36,26 +36,39 @@ function agregar(){
 
 
 function clickPonderada(){
-    
     /*Extrayendo en arrays independientes los elementos de nota y credito del objeto*/
-    const nota = baseDatos.map(({nota}) => nota);
-    const credito = baseDatos.map(({credito}) => credito);
+    // const nota = baseDatos.map(({nota}) => nota);
+    // const credito = baseDatos.map(({credito}) => credito);
 
-    /*Sumando valores de credito para posteriormente dividir segun formula*/
-    const acumulador = (acumulador,credito) => acumulador + credito;
-    let creditoSuma = credito.reduce(acumulador);
+    // Multiplicar cada número de la lista por su peso
+    const NotaxCredito = baseDatos.map(function (noteObject) {
+        return noteObject.note * noteObject.credit;
+    });
+    
+    // Sumar todos los elementos del arreglo de elementos multiplicados notaxcredito
+    const sumaNotaxCredito = NotaxCredito.reduce(
+        function (sum = 0, newVal) {
+            return sum + newVal;
+        }
+    );
+    
+    // Sumar todos los pesos (créditos)
+    const credito = baseDatos.map(function (noteObject) {
+        return noteObject.credito;
+    });
 
-    /*Recorriendo ambas listas y multiplicando valores uno a uno entre listas segun formula*/
-    let ponderadoMultiplicado=0;
-    for (let i = 0; i < nota.length; i++) {
-        ponderadoMultiplicado = ponderadoMultiplicado + (nota[i]*credito[i]);
-    }
-    /*Formula*/
+    const sumaCredito = credito.reduce(
+        function (sum = 0, newVal) {
+            return sum + newVal;
+        }
+    );
+    
+    // Hacer la división entre ambas “sumas”
+    const ponderada = sumaNotaxCredito / sumaCredito;
+    console.log(ponderada);
+
     // mostramos el resultado por pantalla
-    ponderada = ponderadoMultiplicado/creditoSuma;
-    ponderada.innerText = "La ponderada es: " + ponderada;    
+    resultado = document.getElementById("resultadoPonderada");
+    resultado.innerText = "La ponderada es: " + ponderada;
+
 }
-
-/*Llamado de la función*/
-// promedioPonderado(calificaciones);
-
