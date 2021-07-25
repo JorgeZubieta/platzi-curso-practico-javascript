@@ -20,6 +20,7 @@ function clickGuardar(){
     agregar();
 }
 
+
 const baseDatos = [];
 function agregar(){
     // console.log("capturado");
@@ -36,10 +37,12 @@ function agregar(){
 
 
 function clickPonderada(){
+    /*Extrayendo en arrays independientes los elementos de nota y credito del objeto*/
     // Multiplicar cada número de la lista por su peso
     const NotaxCredito = baseDatos.map(function (noteObject) {
         return noteObject.nota * noteObject.credito;
     });
+console.log("nota x credito: " + NotaxCredito);
     
     // Sumar todos los elementos del arreglo de elementos multiplicados notaxcredito
     const sumaNotaxCredito = NotaxCredito.reduce(
@@ -47,23 +50,29 @@ function clickPonderada(){
             return sum + newVal;
         }
     );
+console.log("suma de nota*credito: " + sumaNotaxCredito);
     
-    // Sumar todos los pesos (créditos)
+    // Capturo todos los pesos (créditos)
     const credito = baseDatos.map(function (noteObject) {
         return noteObject.credito;
     });
+console.log("capturo credito: " + credito);
 
-    const sumaCredito = credito.reduce(
+
+    const sumadeCredito = credito.reduce(
         function (sum = 0, newVal) {
-            return sum + newVal;
+            return parseInt(sum) + parseInt(newVal);
         }
     );
+console.log("suma de Creditos: " + sumadeCredito);
+
     
     // Hacer la división entre ambas “sumas”
-    const ponderada = sumaNotaxCredito / sumaCredito;
-    console.log(ponderada);
+    const ponderada = sumaNotaxCredito / sumadeCredito;
+console.log(ponderada);
 
     // mostramos el resultado por pantalla
     resultado = document.getElementById("resultadoPonderada");
     resultado.innerText = "La ponderada es: " + ponderada;
+
 }
