@@ -36,13 +36,9 @@ function agregar(){
 
 
 function clickPonderada(){
-    /*Extrayendo en arrays independientes los elementos de nota y credito del objeto*/
-    // const nota = baseDatos.map(({nota}) => nota);
-    // const credito = baseDatos.map(({credito}) => credito);
-
     // Multiplicar cada número de la lista por su peso
     const NotaxCredito = baseDatos.map(function (noteObject) {
-        return noteObject.note * noteObject.credit;
+        return noteObject.nota * noteObject.credito;
     });
     
     // Sumar todos los elementos del arreglo de elementos multiplicados notaxcredito
@@ -70,5 +66,4 @@ function clickPonderada(){
     // mostramos el resultado por pantalla
     resultado = document.getElementById("resultadoPonderada");
     resultado.innerText = "La ponderada es: " + ponderada;
-
 }
