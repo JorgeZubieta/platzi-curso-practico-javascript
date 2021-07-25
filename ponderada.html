@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponderada</title>
+</head>
+<body>
+    <header>
+        <h1>
+            "Calulo de la Ponderada de un Array"
+        </h1>
+        <p>Reto Ponderada -  Curso Práctico de JavaScript.</p>
+    </header>
+    
+
+    <section>
+        <h2>Ingrese los datos de las materias</h2>
+    
+    <form>
+        <label for="InputMateria">Materia:</label>
+        <input id="InputMateria" type="string" />
+        <br>
+        <label for="InputNota">Nota:</label>
+        <input id="InputNota" type="number" />
+        <br>
+        <label for="InputCredito">Credito:</label>
+        <input id="InputCredito" type="number" />
+        <!-- llamada a la accion call to action! -->
+        <!-- cambie el type de button a reset para que se resete la pmatalla al ingresar u numero-->
+        <button type="reset" onclick="clickGuardar()">
+            Guardar
+        </button>
+        <br>
+        <!-- llamada a la accion call to action! -->
+        <button type="button" onclick="clickPonderada()">
+            Calcular Ponderada
+        </button>
+
+        <p id="ResultP"></p>
+
+    </form>
+    </section>
+
+    <div class="container">
+        <table class="table" id="tabla">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Materia</th>
+                    <th>Nota</th>
+                    <th>Credito</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src = "./ponderada.js"></script>
+
+</body>
+</html>

@@ -24,3 +24,9 @@
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
 
+## Taller #4: reto ponderada
+
+- Primer paso: definir las fórmulas
+- Segundo paso: implementar la fórmulas en JavaScript 
+- Tercer paso: crear funciones
+- Cuarto paso: integrar JS con HTML

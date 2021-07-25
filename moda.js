@@ -39,8 +39,7 @@ function clickModa() {
     );
 
     // Object.entries convierte un objeto en un array
-    // Sort oredna un array conn dos parametros
-
+    // Sort ordena un array con dos parametros
     lista1Array = Object.entries(lista1Count).sort(
         function (elementoA, elementoB) {
             return elementoA[1] - elementoB[1];
