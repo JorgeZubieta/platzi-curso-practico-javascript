@@ -74,5 +74,4 @@ console.log(ponderada);
     // mostramos el resultado por pantalla
     resultado = document.getElementById("resultadoPonderada");
     resultado.innerText = "La ponderada es: " + ponderada;
-
 }
