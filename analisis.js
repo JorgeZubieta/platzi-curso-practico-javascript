@@ -1,27 +1,9 @@
-// Creamos un nuevo array con el campo salario del array  colombia
-// Mediana General
-const salariosCol = colombia.map(
-    function (personita) {
-        return personita.salary;
-    }
-);
-
-// Ordenamos el array creado
-const salariosColSorted = salariosCol.sort(
-    function (salaryA, salaryB) {
-        return salaryA - salaryB;
-    }
-);
-
-const medianaGeneralCol = medianaSalarios(salariosColSorted);
-
-// Calculamos la mediana y depende si el numero es par o impar 
-// con esta reduccion sin ifs nos retorna si es par o impar!!!!
+// Helpers > Calculamos la mediana y depende si el numero es par o impar. con esta reduccion sin ifs nos retorna si es par o impar!!!!
 function esPar(numerito) {
     return (numerito % 2 === 0);
     }
 
-// calculamos la mediana (copiada de mediana.js)
+    // Helpers > calculamos la mediana (copiada de mediana.js)
 function calcularMediaAritmetica(lista) {
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento) {
@@ -32,8 +14,8 @@ function calcularMediaAritmetica(lista) {
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 }
-    
-// Calculadora de mediana buscando el valor medio de impar y dos valores si es par!
+
+// Calculadora de mediana salarios buscando el valor medio de impar y dos valores si es par!
 function medianaSalarios(lista) {
     // necesitamos la mitad de la mediana de salarios
     // parseInt le quita los decimales al resultado
@@ -54,6 +36,37 @@ function medianaSalarios(lista) {
     }
 }
 
-console.log(
-    medianaSalarios(salariosColSorted)
+// Mediana General >Creamos un nuevo array con el campo salario del array  colombia
+const salariosCol = colombia.map(
+    function (personita) {
+        return personita.salary;
+    }
 );
+
+// Ordenamos el array creado
+const salariosColSorted = salariosCol.sort(
+    function (salaryA, salaryB) {
+        return salaryA - salaryB;
+    }
+);
+
+// generamos una variable para guardar la mediana de salarios genrales
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+// Mediana del top 10% > del array de salarios ordenados salariosColSorted. De qui sacaremos las ultimas posiciones
+// Cuantas pos?, lo que represente el 10%
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceCount = salariosColSorted.length - spliceStart;
+
+// Array con el top 10% de los salarios mas altos!
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceCount,
+);
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
+
+console.log({
+    medianaGeneralCol,
+    medianaTop10Col,
+});
